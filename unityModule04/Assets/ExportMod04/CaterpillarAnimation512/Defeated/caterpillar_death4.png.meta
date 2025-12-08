@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 65852ef1a2db215bbad4b7c357187b94
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7944777357123151931
+    second: caterpillar_death4_0
+  - first:
+      213: -4259713884498913234
+    second: caterpillar_death4_1
+  - first:
+      213: 7094828972330337684
+    second: caterpillar_death4_2
+  - first:
+      213: -7332352584160179054
+    second: caterpillar_death4_3
+  - first:
+      213: 1894066218375506349
+    second: caterpillar_death4_4
+  - first:
+      213: 3837668480572080506
+    second: caterpillar_death4_5
+  - first:
+      213: 6737874531839230681
+    second: caterpillar_death4_6
+  - first:
+      213: 2664338386066579684
+    second: caterpillar_death4_7
+  - first:
+      213: -786137315751598440
+    second: caterpillar_death4_8
+  - first:
+      213: -4767406906068722205
+    second: caterpillar_death4_9
+  - first:
+      213: -6561294308870389723
+    second: caterpillar_death4_10
+  - first:
+      213: 1347862188574794106
+    second: caterpillar_death4_11
+  - first:
+      213: 4398311738126641144
+    second: caterpillar_death4_12
+  - first:
+      213: -5887042177704787377
+    second: caterpillar_death4_13
+  - first:
+      213: 1490822839696286822
+    second: caterpillar_death4_14
+  - first:
+      213: 272754488264362930
+    second: caterpillar_death4_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: caterpillar_death4_0
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 322
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c79b11461b7eb190800000000000000
+      internalID: -7944777357123151931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 290
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2894ad7ac472e4c0800000000000000
+      internalID: -4259713884498913234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 262
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49546ed3c55e57260800000000000000
+      internalID: 7094828972330337684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_3
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 259
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c07355c204e3a90800000000000000
+      internalID: -7332352584160179054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_4
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 269
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da9e65fb033194a10800000000000000
+      internalID: 1894066218375506349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_5
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 268
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7146367623224530800000000000000
+      internalID: 3837668480572080506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_6
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 231
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2cd6b103db18d50800000000000000
+      internalID: 6737874531839230681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_7
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 228
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e0afe655a1a9f420800000000000000
+      internalID: 2664338386066579684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_8
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 245
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89662f5c6441715f0800000000000000
+      internalID: -786137315751598440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_9
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 244
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed97008da4c6ddb0800000000000000
+      internalID: -4767406906068722205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_10
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 223
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5200dfcd69991f4a0800000000000000
+      internalID: -6561294308870389723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_11
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 212
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a716e2ce48194b210800000000000000
+      internalID: 1347862188574794106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 75
+        width: 320
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f7287af831f90d30800000000000000
+      internalID: 4398311738126641144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_13
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f420a2c84560d4ea0800000000000000
+      internalID: -5887042177704787377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_14
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 233
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664e227597770b410800000000000000
+      internalID: 1490822839696286822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caterpillar_death4_15
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 228
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb04ef03c409c300800000000000000
+      internalID: 272754488264362930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      caterpillar_death4_0: -7944777357123151931
+      caterpillar_death4_1: -4259713884498913234
+      caterpillar_death4_10: -6561294308870389723
+      caterpillar_death4_11: 1347862188574794106
+      caterpillar_death4_12: 4398311738126641144
+      caterpillar_death4_13: -5887042177704787377
+      caterpillar_death4_14: 1490822839696286822
+      caterpillar_death4_15: 272754488264362930
+      caterpillar_death4_2: 7094828972330337684
+      caterpillar_death4_3: -7332352584160179054
+      caterpillar_death4_4: 1894066218375506349
+      caterpillar_death4_5: 3837668480572080506
+      caterpillar_death4_6: 6737874531839230681
+      caterpillar_death4_7: 2664338386066579684
+      caterpillar_death4_8: -786137315751598440
+      caterpillar_death4_9: -4767406906068722205
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
