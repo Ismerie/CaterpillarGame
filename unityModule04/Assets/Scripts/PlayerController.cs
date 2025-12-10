@@ -1,12 +1,24 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using TMPro;
+
 
 public class PlayerController : MonoBehaviour
 {
     [Header("Stat Player")]
     public int maxHP = 3;
     private int currentHP;
-    
+    public float invincibilityTime = 1f;
+
+    [Header("UI")]
+    public TextMeshProUGUI hpText;
+
+    [Header("Respawn")]
+    public Transform respawnPoint;   // à assigner dans l'Inspector
+    public ScreenFader fader;        // à assigner dans l'Inspector
+
     [Header("Movement")]
     public float moveSpeed = 5f;
 
@@ -16,6 +28,16 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius = 0.1f;
     public LayerMask groundLayer;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip jumpSound;
+    public AudioClip damageSound;
+    public AudioClip defeatSound;
+    public AudioClip respawnSound;
+
+
+
+
     private Rigidbody2D rb;
     private Animator anim;
 
@@ -24,6 +46,10 @@ public class PlayerController : MonoBehaviour
     private bool jumpPressed;
     private bool isGrounded;
     private bool facingRight = true;
+
+    private bool isInvincible = false;
+    private bool canControl = true;           // désactivé pendant la mort/respawn
+    private Coroutine dieRoutine;
 
     private void Awake()
     {
@@ -43,6 +69,22 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         currentHP = maxHP;
+        UpdateHPUI();
+
+        audioSource = GetComponent<AudioSource>();
+
+        // 🔹 Chercher automatiquement le StartPoint de la scène
+        if (respawnPoint == null)
+        {
+            StartPoint start = FindFirstObjectByType<StartPoint>();
+            if (start != null)
+            {
+                respawnPoint = start.transform;
+                // on place aussi le player dessus au début
+                transform.position = respawnPoint.position;
+            }
+        }
+
     }
 
     private void OnEnable()
@@ -76,6 +118,14 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!canControl)
+        {
+            // pas de movement pendant la mort / respawn
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            jumpPressed = false;
+            return;
+        }
+
         // Horizontal movement
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
 
@@ -84,6 +134,12 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            
+            if (audioSource && jumpSound)
+                audioSource.PlayOneShot(jumpSound);
+            // 🔹 Lancer l'animation de saut UNIQUEMENT quand on appuie sur jump
+            if (anim != null)
+                anim.SetTrigger("Jump");
         }
 
         jumpPressed = false;
@@ -103,27 +159,79 @@ public class PlayerController : MonoBehaviour
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 
+    // ---- GESTION DES DÉGÂTS / MORT / RESPAWN ----
+
     public void TakeHit(int amount)
     {
+        if (isInvincible) return;
+        if (dieRoutine != null) return; // évite de prendre des dégâts pendant la séquence de mort
+
         currentHP -= amount;
+        UpdateHPUI();
+
+        if (audioSource && damageSound)
+            audioSource.PlayOneShot(damageSound);
 
         if (anim != null)
             anim.SetTrigger("TakeDamage");
 
-        if (currentHP <= 0)
-            Die();
+        if (currentHP > 0)
+        {
+            StartCoroutine(Invincibility());
+        }
+        else
+        {
+            // HP <= 0 -> mort
+
+            if (dieRoutine == null)
+                dieRoutine = StartCoroutine(DieAndRespawn());
+        }
     }
 
-    private void Die()
+    private IEnumerator Invincibility()
     {
-        if (anim != null)
-            anim.SetTrigger("Die");
-
-        // Optionnel : désactiver le mouvement
-        // rb.velocity = Vector2.zero;
-        // enabled = false; // désactive ce script
+        isInvincible = true;
+        yield return new WaitForSeconds(invincibilityTime);
+        isInvincible = false;
     }
 
+    private IEnumerator DieAndRespawn()
+    {
+        canControl = false;
+        rb.linearVelocity = Vector2.zero;
+
+        if (audioSource && defeatSound)
+            audioSource.PlayOneShot(defeatSound);
+        
+        if (anim != null)
+            anim.SetTrigger("Die");   // animation Defeated
+
+        // fade vers noir
+        if (fader != null)
+            yield return fader.FadeOut();
+
+        // replacer au point de respawn
+        if (respawnPoint != null)
+            transform.position = respawnPoint.position;
+
+        currentHP = maxHP;
+        UpdateHPUI();
+
+        if (audioSource && respawnSound)
+            audioSource.PlayOneShot(respawnSound);
+
+        if (anim != null)
+            anim.SetTrigger("Respawn");   // animation wake-up
+
+        // fade du noir vers transparent
+        if (fader != null)
+            yield return fader.FadeIn();
+
+        canControl = true;
+        dieRoutine = null;
+    }
+
+    // méthode si tu veux respawn manuellement depuis un autre script (optionnel)
     public void Respawn(Vector3 respawnPosition)
     {
         transform.position = respawnPosition;
@@ -131,9 +239,12 @@ public class PlayerController : MonoBehaviour
 
         if (anim != null)
             anim.SetTrigger("Respawn");
+    }
 
-        // Optionnel : réactiver le mouvement
-        // enabled = true;
+    private void UpdateHPUI()
+    {
+        if (hpText != null)
+            hpText.text = "HP: " + currentHP + "/" + maxHP;
     }
 
 }
