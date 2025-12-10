@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
 
         if (currentStageIndex >= stages.Length)
         {
-            Debug.Log("All stages complete!");
+            SceneManager.LoadScene("MainMenu");
             return;
         }
 
